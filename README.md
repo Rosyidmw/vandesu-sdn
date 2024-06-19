@@ -3,9 +3,10 @@
 Berikut ini adalah para pembuat website yang berkontribusi:
 
 1. Muhammad Samudra (2211104062)
-2. Rosyid Mukti Wibowo (2211104076)
-3. Muhammad Hadziq Subono (2211104079)
-4. Adhitya Sofwan Al-Rasyid (2211104089)
+2. DAWNIE JULIAN NUGROHO (2211104064)
+3. Rosyid Mukti Wibowo (2211104076)
+4. Muhammad Hadziq Subono (2211104079)
+5. Adhitya Sofwan Al-Rasyid (2211104089)
 
 # Vandesu Admin - Sistem Manajemen Produk
 
