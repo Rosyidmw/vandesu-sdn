@@ -1,3 +1,12 @@
+## Kontribusi
+
+Berikut ini adalah para pembuat website yang berkontribusi:
+
+1. Muhammad Samudra (2211104062)
+2. Rosyid Mukti Wibowo (2211104076)
+3. Muhammad Hadziq Subono (2211104079)
+4. Adhitya Sofwan Al-Rasyid (2211104089)
+
 # Vandesu Admin - Sistem Manajemen Produk
 
 Vandesu Admin adalah aplikasi berbasis web untuk mengelola produk dan kategori.
@@ -29,6 +38,7 @@ Untuk memulai dengan Vandesu Admin, ikuti langkah-langkah berikut:
 Vandesu Admin memungkinkan Anda untuk mengelola produk dan kategori secara efektif. Berikut cara menggunakannya:
 
 1. **Menambahkan Produk:**
+
    - Buka bagian "Produk".
    - Isi detail produk dalam formulir "Tambah Produk".
    - Unggah gambar dalam format JPG (format lain tidak didukung).
@@ -43,15 +53,6 @@ Vandesu Admin memungkinkan Anda untuk mengelola produk dan kategori secara efekt
 - Menambahkan produk baru dengan detail seperti nama, kategori, harga, gambar, deskripsi, dan ketersediaan stok.
 - Mengunggah gambar produk dalam format JPG.
 - Melihat dan mengelola kategori untuk organisasi yang lebih baik.
-
-## Kontribusi
-
-Berikut ini adalah para pembuat website yang berkontribusi:
-
-1. Muhammad Samudra (2211104062)
-2. Rosyid Mukti Wibowo (2211104076)
-3. Muhammad Hadziq Subono (2211104079)
-4. Adhitya Sofwan Al-Rasyid (2211104089)
 
 ## Kontak
 
