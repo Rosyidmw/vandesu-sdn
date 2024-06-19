@@ -2,7 +2,7 @@
     <div class="container d-flex justify-content-between">
         <!-- Identitas Toko -->
         <div class="d-flex align-items-center">
-            <label class="navbar-brand mb-0 me-4">Vandesu Store<i class="fa-solid fa-paw ms-2"></i></label>
+            <label class="navbar-brand mb-0 me-4">Vandesu Merch<i class="fa-solid fa-paw ms-2"></i></label>
         </div>
 
         <!-- Tombol Toggle untuk Mobile View -->

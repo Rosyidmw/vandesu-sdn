@@ -18,20 +18,20 @@ $queryKategori = mysqli_query($con, "SELECT id, nama FROM kategori");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toko Vandesu | Home</title>
+    <title>Vandesu Merch | Home</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="fontawesome/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
-        .produk-col {
-            margin-bottom: 1rem;
-        }
+    .produk-col {
+        margin-bottom: 1rem;
+    }
 
-        .card:hover {
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
-            transform: translateY(-5px);
-            transition: all 0.3s ease;
-        }
+    .card:hover {
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+        transform: translateY(-5px);
+        transition: all 0.3s ease;
+    }
     </style>
 </head>
 
@@ -41,11 +41,12 @@ $queryKategori = mysqli_query($con, "SELECT id, nama FROM kategori");
     <!-- banner -->
     <div class="container-fluid banner d-flex align-items-center">
         <div class="container text-center text-white">
-            <h1>Vandesu Store<i class="ms-2 fa-solid fa-paw ms-2"></i></h1>
+            <h1>Vandesu Merch<i class="ms-2 fa-solid fa-paw ms-2"></i></h1>
             <div class="col-md-8 offset-md-2">
                 <form action="produk.php" method="get">
                     <div class="input-group input-group-lg my-4">
-                        <input type="text" class="form-control" placeholder="Mau cari apa?" aria-label="Recipient's username" aria-describedby="basic-addon2" name="keyword">
+                        <input type="text" class="form-control" placeholder="Mau cari apa?"
+                            aria-label="Recipient's username" aria-describedby="basic-addon2" name="keyword">
                         <button type="submit" class="btn warna2 text-white">Telusuri</button>
                     </div>
                 </form>
@@ -61,13 +62,15 @@ $queryKategori = mysqli_query($con, "SELECT id, nama FROM kategori");
             <div class="row mt-5">
                 <div class="col-md-4 mb-3">
                     <div class="highlighted-kategori kategori-1 d-flex justify-content-center align-items-center">
-                        <h4 class="text-white"><a class="no-decoration" href="produk.php?kategori=Jujutsu Kaisen">Jujutsu
+                        <h4 class="text-white"><a class="no-decoration"
+                                href="produk.php?kategori=Jujutsu Kaisen">Jujutsu
                                 Kaisen</a></h4>
                     </div>
                 </div>
                 <div class="col-md-4 mb-3">
                     <div class="highlighted-kategori kategori-2 d-flex justify-content-center align-items-center">
-                        <h4 class="text-white"><a class="no-decoration" href="produk.php?kategori=Genshin Impact">Genshin
+                        <h4 class="text-white"><a class="no-decoration"
+                                href="produk.php?kategori=Genshin Impact">Genshin
                                 Impact</a></h4>
                     </div>
                 </div>
@@ -113,21 +116,22 @@ $queryKategori = mysqli_query($con, "SELECT id, nama FROM kategori");
                     $queryProduk = mysqli_query($con, "SELECT id, nama, harga, foto, detail FROM produk WHERE kategori_id = '$kategoriId' LIMIT 3");
 
                     while ($data = mysqli_fetch_array($queryProduk)) { ?>
-                        <div class="col-sm-6 col-md-4 mb-3 produk-col">
-                            <div class="card h-100 shadow">
-                                <div class="image-box">
-                                    <img src="image/produk/<?php echo $data['foto'] ?>" class="card-img-top" alt="...">
-                                </div>
-                                <div class="card-body">
-                                    <h4 class="card-title"><?php echo $data['nama']; ?></h4>
-                                    <p class="card-text text-truncate"><?php echo $data['detail']; ?></p>
-                                    <p class="card-text text-harga">Rp <?php echo formatRupiah($data['harga']); ?></p>
-                                    <a href="produk-detail.php?nama=<?php echo $data['nama']; ?>" class="btn warna2 text-white">Lihat
-                                        Detail</a>
-                                </div>
-                            </div>
+                <div class="col-sm-6 col-md-4 mb-3 produk-col">
+                    <div class="card h-100 shadow">
+                        <div class="image-box">
+                            <img src="image/produk/<?php echo $data['foto'] ?>" class="card-img-top" alt="...">
                         </div>
-                    <?php } ?>
+                        <div class="card-body">
+                            <h4 class="card-title"><?php echo $data['nama']; ?></h4>
+                            <p class="card-text text-truncate"><?php echo $data['detail']; ?></p>
+                            <p class="card-text text-harga">Rp <?php echo formatRupiah($data['harga']); ?></p>
+                            <a href="produk-detail.php?nama=<?php echo $data['nama']; ?>"
+                                class="btn warna2 text-white">Lihat
+                                Detail</a>
+                        </div>
+                    </div>
+                </div>
+                <?php } ?>
                 <?php } ?>
             </div>
             <a href="produk.php" class="btn btn-outline-warning mt-3 p-3 fs-6">See More</a>
