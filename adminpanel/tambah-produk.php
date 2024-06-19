@@ -29,24 +29,24 @@ function generateRandomString($length = 10)
     <link rel="stylesheet" href="../fontawesome/css/fontawesome.min.css">
     <link rel="stylesheet" href="../css/style.css">
     <style>
-    body {
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-    }
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
 
-    main {
-        flex: 1;
-        overflow-y: auto;
-    }
+        main {
+            flex: 1;
+            overflow-y: auto;
+        }
 
-    .no-decoration {
-        text-decoration: none;
-    }
+        .no-decoration {
+            text-decoration: none;
+        }
 
-    form div {
-        margin-bottom: 10px;
-    }
+        form div {
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 
@@ -75,22 +75,20 @@ function generateRandomString($length = 10)
             <form action="" method="post" enctype="multipart/form-data">
                 <div class="mb-3">
                     <label for="nama">Nama</label>
-                    <input type="text" id="nama" name="nama" placeholder="Input nama produk" class="form-control"
-                        autocomplete="off" required>
+                    <input type="text" id="nama" name="nama" placeholder="Input nama produk" class="form-control" autocomplete="off" required>
                 </div>
                 <div class="mb-3">
                     <label for="kategori">Kategori</label>
                     <select name="kategori" class="form-control" required>
                         <option value="">Pilih Kategori</option>
                         <?php while ($data = mysqli_fetch_array($queryKategori)) { ?>
-                        <option value="<?php echo $data['id']; ?>"><?php echo $data['nama']; ?></option>
+                            <option value="<?php echo $data['id']; ?>"><?php echo $data['nama']; ?></option>
                         <?php } ?>
                     </select>
                 </div>
                 <div class="mb-3">
                     <label for="harga">Harga</label>
-                    <input type="number" id="harga" name="harga" placeholder="Input harga" class="form-control"
-                        required>
+                    <input type="number" id="harga" name="harga" placeholder="Input harga" class="form-control" required>
                 </div>
                 <div class="mb-3">
                     <label for="foto">Foto</label>
@@ -131,27 +129,27 @@ function generateRandomString($length = 10)
                 // Validasi input
                 if ($nama == "" || $kategori == "" || $harga == "") {
             ?>
-            <div class="alert alert-warning mt-3" role="alert">
-                Nama, Kategori, Harga wajib diisi
-            </div>
-            <?php
+                    <div class="alert alert-warning mt-3" role="alert">
+                        Nama, Kategori, Harga wajib diisi
+                    </div>
+                    <?php
                 } else {
                     // Proses upload foto jika ada
                     if ($nama_file != '') {
                         $image_size = $_FILES["foto"]["size"];
                         if ($image_size > 5000000) {
                     ?>
-            <div class="alert alert-warning mt-3" role="alert">
-                File tidak boleh lebih dari 500 Kb
-            </div>
-            <?php
+                            <div class="alert alert-warning mt-3" role="alert">
+                                File tidak boleh lebih dari 500 Kb
+                            </div>
+                            <?php
                         } else {
                             if ($imageFileType != "jpg" && $imageFileType != "jpeg" && $imageFileType != "png" && $imageFileType != "gif") {
                             ?>
-            <div class="alert alert-warning mt-3" role="alert">
-                File wajib bertipe jpg, jpeg, png, atau gif
-            </div>
-            <?php
+                                <div class="alert alert-warning mt-3" role="alert">
+                                    File wajib bertipe jpg, jpeg, png, atau gif
+                                </div>
+                        <?php
                             } else {
                                 // Jika semua valid, pindahkan file ke direktori yang ditentukan
                                 $random_name = generateRandomString(20);
@@ -166,10 +164,10 @@ function generateRandomString($length = 10)
 
                     if ($queryTambah) {
                         ?>
-            <div class="alert alert-primary mt-3" role="alert">
-                Produk Berhasil Tersimpan
-            </div>
-            <meta http-equiv="refresh" content="2; url=produk.php" />
+                        <div class="alert alert-primary mt-3" role="alert">
+                            Produk Berhasil Tersimpan
+                        </div>
+                        <meta http-equiv="refresh" content="2; url=produk.php" />
             <?php
                     } else {
                         echo mysqli_error($con);
